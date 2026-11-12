@@ -1,0 +1,6 @@
+{
+  "name": "SSS Bank - Open Banking & Finanzas Personales",
+  "description": "Aplicación móvil auxiliar de Open Banking para la gestión de finanzas personales mediante arquitectura de microservicios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
