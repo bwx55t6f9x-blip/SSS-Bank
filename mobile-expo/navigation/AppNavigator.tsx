@@ -1,6 +1,10 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+  StackCardInterpolationProps,
+} from '@react-navigation/stack';
 import { Home, History, Target, Settings } from 'lucide-react-native';
 
 import LoginScreen from '../screens/LoginScreen.tsx';
@@ -11,7 +15,17 @@ import SettingsModal from '../screens/SettingsModal.tsx';
 import { RootStackParamList, MainTabParamList } from '../types/navigation.ts';
 
 const Tab = createBottomTabNavigator<MainTabParamList>();
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator<RootStackParamList>();
+
+/**
+ * Interpolador forFade personalizado para asegurar una transición suave y no abrupta
+ * en el despliegue del modal transparente de Configuración.
+ */
+export const forFade = ({ current }: StackCardInterpolationProps) => ({
+  cardStyle: {
+    opacity: current.progress,
+  },
+});
 
 function TabNavigator() {
   return (
@@ -73,7 +87,11 @@ function TabNavigator() {
 
 export default function AppNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="MainTabs" component={TabNavigator} />
       <Stack.Screen
@@ -81,7 +99,10 @@ export default function AppNavigator() {
         component={SettingsModal}
         options={{
           presentation: 'transparentModal',
-          animation: 'fade',
+          headerShown: false,
+          cardStyle: { backgroundColor: 'transparent' },
+          // cardStyleInterpolator: forFade para una apertura y cierre no abruptos
+          cardStyleInterpolator: forFade,
         }}
       />
     </Stack.Navigator>

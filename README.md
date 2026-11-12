@@ -55,15 +55,15 @@ La aplicación integra 5 pantallas interconectadas con fidelidad visual íntegra
 | **Pantalla 2** | **Dashboard (Inicio)** | Tarjeta principal con saldo `$12,480.50`, porcentaje de crecimiento `+8.2%`, saludo personalizado con fecha dinámica, resumen dual de ingresos (`$5,450.00`) y gastos (`$2,970.00`), y acceso rápido a presupuestos. |
 | **Pantalla 3** | **Historial de Movimientos** | Indicador de flujo neto mensual `+$2,480.00`, pestañas de filtrado dinámico (`Todas`, `Ingresos`, `Gastos`), desglose de 6 movimientos con iconos categóricos y botón inferior de retorno. |
 | **Pantalla 4** | **Metas y Presupuestos** | Gráfico circular (Donut Chart) con distribución de gastos del mes, desglose porcentual (`Fijos 37%`, `Variables 24%`, `Disponible 39%`), tarjeta de meta `Fondo de emergencia` al 68% (`$3,400 de $5,000`) con abonado interactivo. |
-| **Pantalla 5** | **Configuración & Sesión** | Modal Bottom Sheet interactivo que se despliega sobre la aplicación, datos de perfil (`Alex Cruz`), verificación de cifrado de extremo a extremo y cierre de sesión seguro. |
+| **Pantalla 5** | **Configuración & Sesión (Modal)** | Modal Bottom Sheet interactivo refactorizado con Tailwind CSS, datos de perfil (`Alex Cruz`), botón 'X' de cierre con área táctil ampliada a 44 x 44 pt para estándares de accesibilidad móvil (Apple HIG & WCAG), verificación de cifrado de extremo a extremo y cierre de sesión seguro. |
 
 ---
 
 ## 4. Navegación Fluida con React Navigation
 
-La arquitectura de navegación implementa un flujo dual optimizado:
-- **Stack Navigator (`@react-navigation/native-stack`):** Maneja la pantalla de autenticación inicial (`Login`), la navegación a los módulos principales (`MainTabs`) y el modal transparente de configuración (`SettingsModal`).
-- **Bottom Tab Navigator (`@react-navigation/bottom-tabs`):** Permite cambiar instantáneamente entre **Inicio**, **Historial**, **Metas** y activar **Configuración** mediante la barra inferior fija.
+La arquitectura de navegación implementa un flujo dual con transiciones no abruptas:
+- **Stack Navigator (`@react-navigation/stack`):** Gestiona la pantalla de autenticación (`Login`), el contenedor principal de pestañas (`MainTabs`) y el modal transparente de configuración (`SettingsModal`). Configurado con `cardStyleInterpolator: forFade` para garantizar una apertura y cierre suaves y continuos sin saltos visuales abruptos.
+- **Bottom Tab Navigator (`@react-navigation/bottom-tabs`):** Permite cambiar instantáneamente entre **Inicio**, **Historial**, **Metas** y activar **Configuración** mediante la barra inferior fija con área táctil optimizada.
 
 ---
 

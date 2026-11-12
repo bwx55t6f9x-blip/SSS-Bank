@@ -44,9 +44,11 @@ export const ExpoDocsModal: React.FC<ExpoDocsModalProps> = ({ isOpen, onClose })
 
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-[#0c3836] hover:bg-[#124d4a] flex items-center justify-center text-slate-300 hover:text-white transition-colors cursor-pointer"
+            type="button"
+            aria-label="Cerrar modal de documentación"
+            className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#0c3836] hover:bg-[#124d4a] active:bg-[#165a56] flex items-center justify-center text-slate-300 hover:text-white transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#4ee3a5]/50 shrink-0"
           >
-            <X size={18} />
+            <X size={18} strokeWidth={2.2} />
           </button>
         </div>
 
