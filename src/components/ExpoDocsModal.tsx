@@ -34,10 +34,10 @@ export const ExpoDocsModal: React.FC<ExpoDocsModalProps> = ({ isOpen, onClose })
             </div>
             <div>
               <h2 className="text-base font-bold text-white">
-                Emulación en Móvil con Expo Go
+                Emulación en Móvil con Expo Go (SDK 58)
               </h2>
               <p className="text-xs text-slate-300">
-                Instrucciones para correr SSS Bank nativamente en tu dispositivo
+                Instrucciones para correr SSS Bank con Expo SDK 58, React 19 y New Architecture
               </p>
             </div>
           </div>

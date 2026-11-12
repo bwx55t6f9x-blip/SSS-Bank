@@ -146,7 +146,7 @@ export default function App() {
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#0b3836] hover:bg-[#0f4b48] border border-[#1b5853] text-[#4ee3a5] font-semibold text-xs transition-all cursor-pointer shadow-sm"
           >
             <Smartphone size={14} />
-            <span>Expo Go & README</span>
+            <span>Expo Go (SDK 58) & README</span>
           </button>
         </div>
       </header>

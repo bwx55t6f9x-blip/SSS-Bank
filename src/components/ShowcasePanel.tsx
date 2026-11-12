@@ -147,7 +147,7 @@ export const ShowcasePanel: React.FC<ShowcasePanelProps> = ({
             className="w-full sm:w-auto inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#0c3a38] to-[#124d4a] border border-[#23706a] hover:border-[#4ee3a5] text-white text-xs font-bold shadow-lg transition-all cursor-pointer hover:shadow-[#4ee3a5]/10"
           >
             <Smartphone size={16} className="text-[#4ee3a5]" />
-            <span>Guía de despliegue en Expo Go & React Native</span>
+            <span>Guía de despliegue en Expo Go (SDK 58)</span>
           </button>
         </div>
 

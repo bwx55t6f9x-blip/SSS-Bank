@@ -1,7 +1,7 @@
 # SSS Bank: Aplicación Auxiliar de Open Banking para la Gestión de Finanzas Personales
 
 > **Proyecto:** *Diseño y Desarrollo de la App SSS Bank: Aplicación Auxiliar de Open Banking para la Gestión de Finanzas Personales mediante Arquitectura de Microservicios.*  
-> **Tecnologías:** React Native, Expo Go, React Navigation, Tailwind CSS (NativeWind), TypeScript.
+> **Tecnologías:** React Native (0.80), Expo Go (SDK 58), React 19, React Navigation 7, Tailwind CSS (NativeWind), TypeScript.
 
 ---
 
@@ -67,14 +67,15 @@ La arquitectura de navegación implementa un flujo dual con transiciones no abru
 
 ---
 
-## 5. Instrucciones para Emulación Móvil con Expo Go
+## 5. Instrucciones para Emulación Móvil con Expo Go (SDK 58)
 
 ### Prerrequisitos
-1. Tener instalado **Node.js** (versión 18 o superior).
-2. Tener instalado en su dispositivo móvil la aplicación gratuita **Expo Go**:
+1. Tener instalado **Node.js** (versión 18 o superior / recomendado Node 20 LTS).
+2. Tener instalado en su dispositivo móvil la aplicación gratuita **Expo Go** compatible con **Expo SDK 58**:
    - [Descargar en Google Play Store para Android](https://play.google.com/store/apps/details?id=host.exp.exponent)
    - [Descargar en App Store para iOS](https://apps.apple.com/app/expo-go/id982107779)
-3. Que la computadora de desarrollo y el dispositivo móvil se encuentren conectados a la **misma red Wi-Fi** (o utilizar el modo `--tunnel`).
+3. El proyecto está configurado para **Expo SDK 58**, **React 19** y **New Architecture** (`"newArchEnabled": true`).
+4. Que la computadora de desarrollo y el dispositivo móvil se encuentren conectados a la **misma red Wi-Fi** (o utilizar el modo `--tunnel`).
 
 ### Paso a Paso para Despliegue en Modo Desarrollo
 
